@@ -46,7 +46,7 @@
 			max: 100,
 			title: "DHT Testing",
 			label: "ํC",
-			levelColors: ["#40ff00","#ffbf00","#ff0000"]
+			levelColors: ["#80ff00","#ffff00","#ff0000"]
 		});
 	};
 </script>
@@ -74,7 +74,7 @@
 	});
 	microgear.on('connected', function() {
 		microgear.setname('webapp');
-		document.getElementById("data").innerHTML = '<p><img src="/img/tawan.jpeg" width="150px" hight="150px" id="tesr" onclick="location.reload()"></p>';
+		document.getElementById("data").innerHTML = '<p><img src="/img/tawan.jpeg" width="200px" hight="200px" id="tesr" onclick="location.reload()"></p>';
 	});
 	setInterval(function(){
 		var timestamp_current = new Date().getTime();
