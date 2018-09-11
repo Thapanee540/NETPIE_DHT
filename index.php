@@ -43,7 +43,7 @@
 			id: "DHT_Value", 
 			value: 0, 
 			min: 0,
-			max: 30,
+			max: 50,
 			title: "DHT Testing",
 			label: "ํC",
 			levelColors: ["#ffff00","#80ff00","#ff0000"]
