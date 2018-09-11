@@ -74,7 +74,7 @@
 	});
 	microgear.on('connected', function() {
 		microgear.setname('webapp');
-		document.getElementById("data").innerHTML = '<p><img src="/img/tawan.jpeg" width="50px" hight="50px" id="tesr" onclick="location.reload()"></p>';
+		document.getElementById("data").innerHTML = '<p><img src="/img/tawan.jpeg" width="150px" hight="150px" id="tesr" onclick="location.reload()"></p>';
 	});
 	setInterval(function(){
 		var timestamp_current = new Date().getTime();
