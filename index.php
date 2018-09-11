@@ -46,7 +46,7 @@
 			max: 50,
 			title: "DHT Testing",
 			label: "ํC",
-			levelColors: ["#00ffff","#00ffbf","#80ff00","#ffff00","#ff8000","#ff0000"]
+			levelColors: ["#00ffff","#80ff00","#ffff00","#ff8000","#ff0000"]
 		});
 	};
 </script>
