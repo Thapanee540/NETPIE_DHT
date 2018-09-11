@@ -12,7 +12,7 @@
 		text-align: center;
 	}
       
-	#ADC_Value {
+	#DHT_Value {
 		width:200px; height:160px;
 		display: inline-block;
 	}
@@ -20,7 +20,7 @@
 		font-size: 20px;
 		color: blue;
 	}
-	#ADC {
+	"DHT {
 		display: none;
 		border: 1px solid black;
 		border-radius: 10px;
@@ -36,14 +36,14 @@
 </style>
 
 <script>
-	var ADC_Value;
+	var DHT_Value;
 	window.onload = function(){
-		ADC_Value = new JustGage({
-			id: "ADC_Value", 
+		DHT_Value = new JustGage({
+			id: "DHT_Value", 
 			value: 0, 
 			min: 0,
 			max: 1024,
-			title: "ADC Testing",
+			title: "DHT Testing",
 			label: "%",
 			levelColors: ["#00fff6","#ff00fc","#1200ff"]
 		});
@@ -64,21 +64,21 @@
 		var timestamp_current = new Date().getTime();
 		//console.log(msg);
 		
-		if(typeof(split_msg[3])!='undefined' && split_msg[3]=='ADC_Value'){
-				document.getElementById("ADC").style.display = "block";
+		if(typeof(split_msg[3])!='undefined' && split_msg[3]=='DHT_Value'){
+				document.getElementById("DHT").style.display = "block";
 				document.getElementById("name").innerHTML = split_msg[4].toUpperCase();;
-				ADC_Value.refresh(split_msg[0]);
+				DHT_Value.refresh(split_msg[0]);
 				timestamp = timestamp_current;
 		}
 	});
 	microgear.on('connected', function() {
 		microgear.setname('webapp');
-		document.getElementById("data").innerHTML = '<p><img src="/img/tawan.jpeg" width="250px" hight="250px" id="tesr" onclick="location.reload()"></p>';
+		document.getElementById("data").innerHTML = '<p><img src="/img/tawan.jpeg" width="50px" hight="50px" id="tesr" onclick="location.reload()"></p>';
 	});
 	setInterval(function(){
 		var timestamp_current = new Date().getTime();
 		if((timestamp_current-timestamp)>10000){
-			document.getElementById("ADC").style.display = "none";
+			document.getElementById("DHT").style.display = "none";
 		}
 	},1000);
 	microgear.resettoken(function(err){
@@ -87,7 +87,7 @@
 </script>
 
 <div id="data"></div>
-<div id="ADC">
+<div id="DHT">
 	<div id="name"></div>
-	<div id="ADC_Value"></div>
+	<div id="DHT_Value"></div>
 </div>
