@@ -6,6 +6,7 @@
 <script src="/js/justgage.1.0.1.min.js"></script>
 
 <!-- <script src="https://netpie.io/microgear.js"></script> -->
+<meta charset="UTF-8">
 
 <style>
 	body {
@@ -42,10 +43,10 @@
 			id: "DHT_Value", 
 			value: 0, 
 			min: 0,
-			max: 1024,
+			max: 100,
 			title: "DHT Testing",
-			label: "%",
-			levelColors: ["#00fff6","#ff00fc","#1200ff"]
+			label: "ํC",
+			levelColors: ["#40ff00","#ffbf00","#ff0000"]
 		});
 	};
 </script>
